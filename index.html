@@ -3,20 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
         <title>Awesome Books App</title>
     </head>
     <body>
         <section>
             <h1>Awesome books</h1>
-            <p>Lorem ipsum</p>
-            <p>Testeroo Testyy</p>
-            <button type="submit">Remove</button>
+            <ul id="book-list"></ul>
+            <hr>
         </section>
-        <form>
-            <input type="text" placeholder="Title"><br>
-            <input type="text" placeholder="Author"><br>
+        <form id='form'>
+            <input type="text" id="title" placeholder="Title"><br>
+            <input type="text" id="author" placeholder="Author"><br>
             <button type="submit">Add</button>
         </form>
+
+
+        <script src="script.js"></script>
     </body>
 </html>
