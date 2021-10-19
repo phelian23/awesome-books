@@ -71,5 +71,3 @@ form.addEventListener('submit', () => {
 
   Book.addBook(book);
 });
-
-
