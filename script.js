@@ -71,3 +71,9 @@ form.addEventListener('submit', () => {
 
   Book.addBook(book);
 });
+
+document.querySelector('#book-list').addEventListener('click', (e) => {
+  Book.deleteBook(e.target);
+
+  Book.removeBook(e.target.previousElementSibling.textContent);
+});
