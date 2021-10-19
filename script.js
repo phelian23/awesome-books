@@ -57,3 +57,19 @@ class Book {
   }
 }
 
+document.addEventListener('DOMContentLoaded', Book.displayBooks);
+
+const form = document.querySelector('#form');
+
+form.addEventListener('submit', () => {
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+
+  const book = new Book(title, author);
+
+  Book.addBookToList(book);
+
+  Book.addBook(book);
+});
+
+
