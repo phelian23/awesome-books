@@ -37,9 +37,14 @@ class Book {
     const listItem = document.createElement('li');
 
     listItem.innerHTML = `
-        <p>${book.title}</p>
+        <div class="book">
+        <div class="list-txt">
+        <p>"${book.title}"</p>
+        <p>by</p>
         <p>${book.author}</p>
+        </div>
         <button id=${book.id} type="submit" class="remove">Remove</button>
+        </div>
         `;
 
     list.appendChild(listItem);
@@ -62,7 +67,7 @@ document.addEventListener('DOMContentLoaded', Book.displayBooks);
 
 const form = document.querySelector('#form');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', () => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   const id = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
