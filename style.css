@@ -4,58 +4,57 @@ body {
 
 ul {
   list-style-type: none;
-  margin: 10px 0;
+  margin: 10px auto;
   padding: 0;
   border: 0.5px solid;
   width: 80%;
   max-width: 500px;
-  margin: auto;
 }
 
 li:nth-child(odd) {
-    background: #f3f3f3;
+  background: #f3f3f3;
 }
 
 .book {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
 }
 
 .list-txt {
-    display: flex;
+  display: flex;
 }
 
 .list-txt p {
-    margin: 7px;
+  margin: 7px;
 }
 
 hr {
-    width: 10%;
-    margin: 4vh auto;
-    border: 1px solid black;
+  width: 10%;
+  margin: 4vh auto;
+  border: 1px solid black;
 }
 
 #form {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 50%;
-    max-width: 230px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+  max-width: 230px;
 }
 
 #title {
-    width: 100%;
-    margin: 1% 0;
-    padding: 2% 0;
+  width: 100%;
+  margin: 1% 0;
+  padding: 2% 0;
 }
 
 #author {
-    width: 100%;
-    padding: 2% 0;
+  width: 100%;
+  padding: 2% 0;
 }
 
 .btn-add {
-    align-self: flex-end;
+  align-self: flex-end;
 }
