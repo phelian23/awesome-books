@@ -51,4 +51,11 @@ hr {
     padding: 2% 0;
 }
 
+#author {
+    width: 100%;
+    padding: 2% 0;
+}
 
+.btn-add {
+    align-self: flex-end;
+}
