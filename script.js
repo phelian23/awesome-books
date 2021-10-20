@@ -1,7 +1,8 @@
 class Book {
-  constructor(title, author) {
+  constructor(title, author, id) {
     this.title = title;
     this.author = author;
+    this.id = id;
   }
 
   static getBooks() {
@@ -19,11 +20,11 @@ class Book {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(author) {
+  static removeBook(id) {
     const books = Book.getBooks();
 
     books.forEach((book, index) => {
-      if (book.author === author) {
+      if (book.id === id) {
         books.splice(index, 1);
       }
     });
@@ -38,7 +39,7 @@ class Book {
     listItem.innerHTML = `
         <p>${book.title}</p>
         <p>${book.author}</p>
-        <button type="submit" class="remove">Remove</button>
+        <button id=${book.id} type="submit" class="remove">Remove</button>
         `;
 
     list.appendChild(listItem);
@@ -61,11 +62,12 @@ document.addEventListener('DOMContentLoaded', Book.displayBooks);
 
 const form = document.querySelector('#form');
 
-form.addEventListener('submit', () => {
+form.addEventListener('submit', (e) => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
+  const id = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
 
-  const book = new Book(title, author);
+  const book = new Book(title, author, id);
 
   Book.addBookToList(book);
 
@@ -75,5 +77,5 @@ form.addEventListener('submit', () => {
 document.querySelector('#book-list').addEventListener('click', (e) => {
   Book.deleteBook(e.target);
 
-  Book.removeBook(e.target.previousElementSibling.textContent);
+  Book.removeBook(e.target.id);
 });
