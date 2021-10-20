@@ -33,6 +33,11 @@
 
 - GitHub: [@phelian23](https://github.com/phelian23)
 
+
+👤 **Mprotic123**
+
+- GitHub: [@mprotic123](https://github.com/mprotic123)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
