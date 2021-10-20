@@ -37,9 +37,14 @@ class Book {
     const listItem = document.createElement('li');
 
     listItem.innerHTML = `
-        <p>${book.title}</p>
+        <div class="book">
+        <div class="list-txt">
+        <p>"${book.title}"</p>
+        <p>by</p>
         <p>${book.author}</p>
+        </div>
         <button id=${book.id} type="submit" class="remove">Remove</button>
+        </div>
         `;
 
     list.appendChild(listItem);
