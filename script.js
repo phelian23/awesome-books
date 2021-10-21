@@ -116,3 +116,16 @@ addNewList.addEventListener('click', showBook);
 
 openContact.addEventListener('click', showContact);
 
+/* global luxon, luxon */
+
+const dateTime = document.getElementById('date');
+
+const date = () => {
+  window.addEventListener('load', () => {
+    const { DateTime } = luxon;
+    this.today = DateTime.now();
+    dateTime.textContent = this.today.toLocaleString(DateTime.DATETIME_MED);
+  });
+};
+
+date();
