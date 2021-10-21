@@ -77,6 +77,8 @@ form.addEventListener('submit', () => {
   Book.addBookToList(book);
 
   Book.addBook(book);
+
+  form.reset();
 });
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
@@ -117,6 +119,8 @@ addNewList.addEventListener('click', showBook);
 openContact.addEventListener('click', showContact);
 
 const dateTime = document.getElementById('date');
+
+/* global luxon, luxon */
 
 const date = () => {
   window.addEventListener('load', () => {
