@@ -97,10 +97,10 @@ a {
 }
 
 footer {
-    display: flex;
-    border: 0.5px solid;
-    padding: 1% 10%;
-    position: fixed;
-    width: 100%;
-    bottom: 1%;
+  display: flex;
+  border: 0.5px solid;
+  padding: 1% 10%;
+  position: fixed;
+  width: 100%;
+  bottom: 1%;
 }
