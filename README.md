@@ -4,9 +4,7 @@
 
 > Creating an app that adds and delete books from a list.
 
-![screenshot]()
-
-.
+![screenshot](./2021-10-21.png)
 
 ## Built With
 
@@ -16,6 +14,7 @@
 
 ## Application Page url
 
+https://phelian23.github.io/awesome-books/
 
 ## Getting Started
 

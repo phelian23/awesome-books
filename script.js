@@ -116,8 +116,6 @@ addNewList.addEventListener('click', showBook);
 
 openContact.addEventListener('click', showContact);
 
-/* global luxon, luxon */
-
 const dateTime = document.getElementById('date');
 
 const date = () => {
