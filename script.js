@@ -77,6 +77,8 @@ form.addEventListener('submit', () => {
   Book.addBookToList(book);
 
   Book.addBook(book);
+
+  form.reset();
 });
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
@@ -84,3 +86,48 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 
   Book.removeBook(e.target.id);
 });
+
+const addNewList = document.getElementById('add-new-book');
+const openForm = document.getElementById('open-form');
+const openContact = document.getElementById('open-contact');
+const addNew = document.getElementById('form-sec');
+const bookList = document.getElementById('add-book');
+const contact = document.getElementById('contact');
+
+function showForm() {
+  addNew.classList.remove('none');
+  bookList.classList.add('none');
+  contact.classList.add('none');
+}
+
+function showBook() {
+  bookList.classList.remove('none');
+  addNew.classList.add('none');
+  contact.classList.add('none');
+}
+
+function showContact() {
+  contact.classList.remove('none');
+  bookList.classList.add('none');
+  addNew.classList.add('none');
+}
+
+openForm.addEventListener('click', showForm);
+
+addNewList.addEventListener('click', showBook);
+
+openContact.addEventListener('click', showContact);
+
+const dateTime = document.getElementById('date');
+
+/* global luxon, luxon */
+
+const date = () => {
+  window.addEventListener('load', () => {
+    const { DateTime } = luxon;
+    this.today = DateTime.now();
+    dateTime.textContent = this.today.toLocaleString(DateTime.DATETIME_MED);
+  });
+};
+
+date();

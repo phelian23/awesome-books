@@ -2,7 +2,33 @@ body {
   text-align: center;
 }
 
-ul {
+.navbar {
+  display: flex;
+  padding: 0 10%;
+  justify-content: space-between;
+  border: 0.5px solid black;
+  align-content: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar li {
+  display: inline-block;
+  padding: 0 1vw;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.border-right {
+  border-right: 1px solid;
+}
+
+#book-list {
   list-style-type: none;
   margin: 10px auto;
   padding: 0;
@@ -11,7 +37,7 @@ ul {
   max-width: 500px;
 }
 
-li:nth-child(odd) {
+#book-list li:nth-child(odd) {
   background: #f3f3f3;
 }
 
@@ -28,12 +54,6 @@ li:nth-child(odd) {
 
 .list-txt p {
   margin: 7px;
-}
-
-hr {
-  width: 10%;
-  margin: 4vh auto;
-  border: 1px solid black;
 }
 
 #form {
@@ -57,4 +77,30 @@ hr {
 
 .btn-add {
   align-self: flex-end;
+}
+
+.contact ul {
+  margin: auto;
+  width: 80%;
+  max-width: 320px;
+  text-align: left;
+}
+
+.none {
+  display: none;
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1% 10%;
+}
+
+footer {
+  display: flex;
+  border: 0.5px solid;
+  padding: 1% 10%;
+  position: fixed;
+  width: 100%;
+  bottom: 1%;
 }

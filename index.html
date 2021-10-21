@@ -7,19 +7,42 @@
         <title>Awesome Books App</title>
     </head>
     <body>
-        <section>
+        <nav class="navbar">
+            <p>Awesome Books</p>
+            <ul>
+                <li class="border-right" id="add-new-book"><a href="#">List</a></li>
+                <li class="border-right" id="open-form"><a href="#">Add new</a></li>
+                <li id="open-contact"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <span id="date" class="date"></span>
+        <section id="add-book">
             <h1>All awesome books</h1>
             <ul id="book-list"></ul>
-            <hr>
         </section>
-        <form id='form'>
-            <h2>Add a new book</h2>
-            <input type="text" id="title" placeholder="Title"><br>
-            <input type="text" id="author" placeholder="Author"><br>
-            <button class="btn-add" type="submit">Add</button>
-        </form>
+        <section id="form-sec" class="none">
+            <form id='form'>
+                <h2>Add a new book</h2>
+                <input type="text" id="title" placeholder="Title"><br>
+                <input type="text" id="author" placeholder="Author"><br>
+                <button class="btn-add" type="submit">Add</button>
+            </form>
+        </section>
+        <section class="contact none" id="contact">
+            <h2>Contact information</h2>
+            <p>Do you have any questions or you want to say "Hello"?<br>You can reach out to us!</p>
+            <ul>
+                <li>Our e-mail mail@mail.com</li>
+                <li>Our phone number 457878947656788789</li>
+                <li>Our address Streetname 22, 578883 City, Country</li>
+            </ul>
+        </section>
+        <footer>
+            Copyright
+        </footer>
 
 
         <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
     </body>
 </html>
