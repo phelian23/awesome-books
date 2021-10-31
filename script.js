@@ -16,19 +16,18 @@ class Book {
 
   static addBook(book) {
     const books = Book.getBooks();
-    books.push(book);
+    books[books.length] = book;
     localStorage.setItem('books', JSON.stringify(books));
   }
 
   static removeBook(id) {
     const books = Book.getBooks();
 
-    books.forEach((book, index) => {
-      if (book.id === id) {
-        books.splice(index, 1);
-      }
+    const newBooks = books.filter((book) => book.id !== id);
+    newBooks.forEach((object, index) => {
+      object.index = index + 1;
     });
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('books', JSON.stringify(newBooks));
   }
 
   static addBookToList(book) {
